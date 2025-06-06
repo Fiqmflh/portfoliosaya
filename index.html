@@ -197,53 +197,74 @@ nav ul {
     background-color: #00fff7;
   }
 
-  /* === SECTION CONTACT === */
-  #contact .social-media {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: center;
-  }
+/* === SECTION CONTACT === */
+#contact {
+  transform: scale(1.15);
+  transform-origin: top;
+  padding: 2rem 1rem;
+}
 
-  #contact .social-media h3 {
-    font-size: 28px;
-    margin-bottom: 1rem;
-  }
+#contact .social-media {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
 
+#contact .social-media h3 {
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+  color: #00fff7;
+}
+
+#contact .social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#contact .social-links a {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #f1f1f1;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+  justify-content: center;
+}
+
+#contact .social-links a i {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+#contact .social-links a:hover {
+  background-color: #00fff7;
+  color: #121212;
+}
+
+#contact .social-links a:hover i {
+  color: #121212;
+}
+
+/* RESPONSIVE: Di atas 600px → jadi horizontal */
+@media (min-width: 600px) {
   #contact .social-links {
-    font-size: 20px;
-    display: flex;
-    gap: 1.5rem;
+    flex-direction: row;
     justify-content: center;
   }
 
   #contact .social-links a {
-    display: flex;
-    align-items: center;
-    color: #f1f1f1;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: color 0.3s ease;
+    max-width: none;
+    width: auto;
   }
-
-  #contact .social-links a:hover {
-    color: #ffffff;
-  }
-
-  #contact .social-links i {
-    margin-right: 8px;
-    font-size: 24px;
-  }
-
-  /* RESPONSIVE: mobile bawah 500px */
-  @media (max-width: 700px) {
-    #contact .social-links {  
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
+}
 </style>
-
-
 
 </head>
 <body>
@@ -522,13 +543,13 @@ nav ul {
     <h3 style="font-size: 28px;">Connect with me</h3>
     <div class="social-links" style="font-size: 20px;">
       <a href="https://instagram.com/fiqmflh_" target="_blank" rel="noopener" aria-label="Instagram">
-        <i class="fab fa-instagram" style="font-size: 24px; margin-right: 8px;"></i> Instagram
+        <i class="fab fa-instagram" style="font-size: 24px; margin-right:2px;"></i>
       </a><br>
       <a href="https://wa.me/6281229144427" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 8px;"></i> WhatsApp
+        <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 2px;"></i>
       </a><br>
       <a href="https://www.linkedin.com/in/muhammad-muflih-syafiq-a3827b34b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in" style="font-size: 24px; margin-right: 8px;"></i> LinkedIn
+        <i class="fab fa-linkedin-in" style="font-size: 24px; margin-right: 2px;"></i>
       </a>
     </div>
   </div>

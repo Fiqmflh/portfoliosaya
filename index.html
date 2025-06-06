@@ -29,103 +29,141 @@
     color: #f1f1f1;
   }
 
-  /* === NAVBAR UMUM === */
-  nav {
-    background-color: #1a1a1a;
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 9999;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  }
+/* === NAVBAR UMUM === */
+nav {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
 
-  nav .logo {
-    font-size: 1.4rem;
-    font-weight: bold;
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00fff7;
+}
+
+nav .hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #00fff7;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* NAV MENU MOBILE */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 220px;
+  height: calc(100% - 60px);
+  padding: 2rem 1.5rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  border-radius: 0 0 0 10px;
+  z-index: 9998;
+}
+
+
+nav ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li a {
+  color: #f1f1f1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 100%;
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  text-shadow: none !important;
+  background: black;
+  transition: background-color 0.3s ease;
+  text-decoration: none !important;
+
+}
+
+nav ul li a:hover {
     color: #00fff7;
-  }
+}
 
+/* NAV MENU DESKTOP */
+@media screen and (min-width: 769px) {
+  nav {
+    padding: 1rem 3rem;
+  }
+  
   nav .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-  }
-
-  .hamburger span {
-    width: 25px;
-    height: 3px;
-    background: #00fff7;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    display: none;
   }
 
   nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    transform: none;
+    border-radius: 0;
     align-items: center;
-    gap: 1.5rem;
-    position: fixed;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    height: calc(100% - 60px);
-    background-color: #222;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    padding-top: 2rem;
-    box-shadow: -2px 0 8px rgba(0, 255, 247, 0.1);
-  }
-
-  nav ul.active {
-    transform: translateX(0);
+    gap: 2.5rem;
   }
 
   nav ul li a {
-    color: #f1f1f1;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-size: 1rem;
+    padding: 0;
   }
 
-  nav ul li a:hover {
-    color: #00fff7;
-  }
+  nav ul li img,
+nav ul li svg {
+  display: none;
+}
 
-  /* === DESKTOP === */
-  @media screen and (min-width: 769px) {
-    nav .hamburger {
-      display: none;
-    }
+/* Jarak antar menu item */
+nav ul {
+  gap: 1rem;
+}
+}
 
-    nav ul {
-      position: static;
-      flex-direction: row;
-      height: auto;
-      background: none;
-      transform: none;
-      box-shadow: none;
-      padding-top: 0;
-      gap: 2rem;
-    }
-  }
 
   /* === KONTEN UTAMA === */
   main {

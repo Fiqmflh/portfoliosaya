@@ -13,39 +13,11 @@ body {
   animation: fadeInBody 1s ease forwards;
 }
 
-/* ===== Navbar ===== */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 2rem;
-  background: rgba(15, 15, 15, 0.9);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  backdrop-filter: blur(10px);
-  transition: background 0.3s ease;
-}
 .logo {
   font-size: 1.4rem;
   font-weight: bold;
   color: #00fff7;
 }
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-nav ul li a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-nav ul li a:hover {
-  color: #00fff7;
-}
-
 /* ===== Hero Section ===== */
 .hero {
   padding: 100px 20px;
@@ -283,7 +255,7 @@ body, nav, section, .card, .btn-glow {
     .skill-level {
         height: 100%;
         border-radius: 4px;
-        transition: width 1s ease;
+        transition: width 100s ease;
     }
     
     /* Warna Ikon */
@@ -406,17 +378,15 @@ nav ul {
 @media (max-width: 768px) {
   /* Style untuk nav links di mobile */
   nav ul {
-    background: rgba(20, 20, 20, 0.98);
     padding: 1.5rem;
     border-radius: 0 0 0 15px;
-    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
   }
   
   nav ul li a {
     display: block;
     padding: 12px 15px;
     margin: 8px 0;
-    background: rgba(0, 15, 15, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 8px;
     border: 1px solid rgba(0, 255, 247, 0.3);
     color: #00fff7;
@@ -544,7 +514,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: rgba(15, 15, 15, 0.95); /* pastikan ini muncul */
+  background: rgba(0, 0, 0, 0.95); /* pastikan ini muncul */
   position: fixed;
   width: 100%;
   top: 0;
@@ -557,7 +527,7 @@ nav {
   position: fixed;
   top: 70px; /* pastikan tidak di bawah nav */
   right: 20px;
-  background: #1a1a1a;
+  background: #000000;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 255, 247, 0.2);
   padding: 1.2rem;
@@ -586,7 +556,7 @@ nav {
 .nav-card ul li a {
   color: #00fff7;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 10px;
   border-radius: 8px;
   transition: background 0.3s;
@@ -946,3 +916,4 @@ nav {
     background: #00ccc5;
     box-shadow: 0 0 12px #00ccc5;
 }
+

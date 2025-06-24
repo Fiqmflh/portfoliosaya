@@ -320,7 +320,7 @@ body, nav, section, .card, .btn-glow {
 .social-links a {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
   color: #00fff7;
   font-weight: 600;
   text-decoration: none;
@@ -917,3 +917,23 @@ nav {
     box-shadow: 0 0 12px #00ccc5;
 }
 
+
+.skill-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.skill-icon {
+    margin-bottom: 3px;
+}
+
+.skill-name {
+    font-size: 11px;
+    color: #f1f1f1;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 2px;
+}
